@@ -12,7 +12,7 @@
 <h2>Comments</h2>
 
 <ul>
-  @forelse ($post->comments as $commnet)
+  @forelse ($post->comments as $comment)
     <li>
       {{ $comment->body }}
     </li>
@@ -20,5 +20,19 @@
     <li>No comments yes</li>
   @endforelse
 </ul>
+
+<form method="post" action="{{ action('CommentsController@store', $post) }}">
+  {{ csrf_field()}}
+  <p>
+    <input type="text" name="body" placeholder="enter comment" value="{{ old('body') }}">
+    @if ($errors->has('body'))
+      <span class="error">{{ $errors->first('body') }}</span>
+    @endif
+  </p>
+  <p>
+    <input type="submit" value="Add Comment">
+  </p>
+</form>
+
 
 @endsection
