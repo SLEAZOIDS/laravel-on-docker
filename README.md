@@ -17,3 +17,12 @@ APPLICATION=../src/
 
 # コンテナ立ち上げ
 - $docker-compose up -d nginx mysql phpmyadmin
+
+# メールの送受信テスト
+mailtrapを使う https://mailtrap.io  
+src/.envで以下の設定をmailtrapで取得したアカウントと合わせる  
+- MAIL_DRIVER=smtp
+- MAIL_HOST=smtp.mailtrap.io
+- MAIL_PORT=2525
+- MAIL_USERNAME=***********
+- MAIL_PASSWORD=***********
