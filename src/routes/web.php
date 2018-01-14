@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/posts/{post}', 'PostsController@show')->where('post', '[0-9]+');
 Route::get('/posts/create', 'PostsController@create');
 Route::post('/posts', 'PostsController@store');
@@ -20,3 +20,7 @@ Route::patch('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::delete('/posts/{post}/comments/{comment}', 'CommentsController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
