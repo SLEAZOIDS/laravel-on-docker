@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.app')
 
 @section('title', 'Blog Posts')
 
@@ -17,7 +17,7 @@
         {{ csrf_field() }}
         {{ method_field('delete') }}
       </form>
-        
+
     </li>
   @empty
     <li>No post yes</li>
