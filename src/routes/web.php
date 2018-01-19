@@ -25,3 +25,5 @@ Route::delete('/posts/{post}/comments/{comment}', 'CommentsController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/stores/{store}', 'StoresController@show')->where('store', '[0-9]+');

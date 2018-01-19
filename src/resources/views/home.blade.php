@@ -12,9 +12,21 @@
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
+                        You are logged in!
+                    @else
+                        こんにちわ　ゲストさん
                     @endif
 
-                    You are logged in!
+                    <ul>
+                      @forelse ($stores as $store)
+                        <li>
+                          <a href="{{ action('StoresController@show', $store) }}">{{ $store->name }}</a>
+                        </li>
+                      @empty
+                        <li>No post yes</li>
+                      @endforelse
+                    </ul>
+
                 </div>
             </div>
         </div>

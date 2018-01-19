@@ -52,3 +52,8 @@ h2 {
   font-size: 14px;
   padding-top: 25px;
 }
+
+.tag {
+  font-size: 9px;
+  color: tomato;
+}
