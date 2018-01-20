@@ -3,11 +3,6 @@ body {
   font-size: 14px;
 }
 
-.container {
-  width: 400px;
-  margin: 20px auto;
-}
-
 h1 {
   font-size: 16px;
   padding-bottom: 10px;
@@ -56,4 +51,23 @@ h2 {
 .tag {
   font-size: 9px;
   color: tomato;
+}
+
+p#store_name{
+  font-size: 28px;
+}
+
+div#store_date {
+  width: 700px;
+  margin: 20px auto;
+}
+
+table#store_date th, td{
+  border-bottom:1px #eee solid;
+  padding-bottom: 10px;
+}
+
+table#store_date th{
+  width: 200px;
+
 }
