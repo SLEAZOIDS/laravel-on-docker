@@ -20,6 +20,11 @@ ul > li {
   float: right;
 }
 
+.reservation {
+  padding-right: 10px;
+  color: tomato;
+}
+
 input[type="text"], textarea {
   box-sizing: border-box;
   width: 400px;
@@ -70,4 +75,22 @@ table#store_date th, td{
 table#store_date th{
   width: 200px;
 
+}
+
+
+ul.reserve_item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+ul.reserve_item > li{
+  background: #badcf7;
+  border: solid 1px #9aaace;
+  box-sizing: border-box;
+  padding: 15px 0;
+  text-align: center;
+  flex-grow: 1;
 }

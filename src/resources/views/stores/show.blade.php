@@ -6,6 +6,7 @@
 <div id="store_date">
 <h1>
     <a href="{{ url('/') }}" class="header-menu">Back</a>
+    <a href="{{ action('ReservationsController@reserve', $store) }}" class="header-menu reservation">予約</a>
     <p id="store_name">{{ $store->name }}</p>
 </h1>
 <table id="store_date">
