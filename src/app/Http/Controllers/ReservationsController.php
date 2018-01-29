@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Reservation;
 use App\Store;
 use App\User;
+use Auth;
 
 class ReservationsController extends Controller
 {
@@ -14,19 +15,17 @@ class ReservationsController extends Controller
     }
 
     public function user(Store $store){
-        //TODO
-        $user = User::find(1);
+        $user = Auth::user();
         return view('reservations.second', compact('store', 'user'));
     }
 
     public function store(Request $request, Store $store){
-        //TODO
-        $user = User::find(1);
+        $user = Auth::user();
         $this->validate($request, [
             'name' => 'required'
         ]);
 
-        //TODO
+        //TODO データ適当
         $reservation = new Reservation([
             'user_id' => $user->id,
             'store_id' => $store->id,
