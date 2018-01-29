@@ -25,6 +25,6 @@ Route::delete('/posts/{post}/comments/{comment}', 'CommentsController@destroy');
 Auth::routes();
 
 Route::get('/stores/{store}', 'StoresController@show')->where('store', '[0-9]+');
-Route::get('/stores/{store}/reserve', 'ReservationsController@reserve')->where('store', '[0-9]+');
-Route::get('/stores/{store}/reserve/user', 'ReservationsController@user')->where('store', '[0-9]+');
-Route::post('/stores/{store}/reserve/user', 'ReservationsController@store')->where('store', '[0-9]+');
+Route::get('/stores/{store}/reserve', 'ReservationsController@reserve')->where('store', '[0-9]+')->middleware('auth');
+Route::get('/stores/{store}/reserve/user', 'ReservationsController@user')->where('store', '[0-9]+')->middleware('auth');
+Route::post('/stores/{store}/reserve/user', 'ReservationsController@store')->where('store', '[0-9]+')->middleware('auth');
