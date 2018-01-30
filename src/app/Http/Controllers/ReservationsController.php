@@ -10,6 +10,11 @@ use Auth;
 
 class ReservationsController extends Controller
 {
+    public function show(){
+        $user = Auth::user();
+        return view('reservations.show')->with('user', $user);
+    }
+
     public function reserve(Store $store){
         return view('reservations.first')->with('store', $store);
     }

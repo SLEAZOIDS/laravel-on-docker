@@ -12,4 +12,8 @@ class Store extends Model
       return $this->hasMany('App\TagRelation');
     }
 
+    public function reservations(){
+      return $this->hasMany('App\Reservation');
+    }
+
 }

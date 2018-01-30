@@ -10,4 +10,13 @@ class Reservation extends Model
         'user_id', 'store_id', 'number_of_guests',
         'date_time', 'name', 'email', 'tel', 'use_scene', 'etc'
     ];
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function store(){
+        return $this->belongsTo('App\Store');
+    }
+
 }
