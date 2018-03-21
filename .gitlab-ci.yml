@@ -1,0 +1,13 @@
+image: docker:latest
+
+# 最初に実行されます。
+before_script:
+  - echo "before start"
+
+job_docker: # 名前は適当
+  # 実行するスクリプト
+  script: 
+    - echo "uname -a"
+  # どこで実行するか
+  tags:
+    - shell
