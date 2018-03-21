@@ -13,3 +13,4 @@ job_docker: # 名前は適当
   # どこで実行するか
   tags:
     - shell
+    - docker
