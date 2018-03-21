@@ -8,6 +8,8 @@ job_docker: # 名前は適当
   # 実行するスクリプト
   script: 
     - echo "uname -a"
+    - touch test.txt
+    - mkdir test
   # どこで実行するか
   tags:
     - shell
