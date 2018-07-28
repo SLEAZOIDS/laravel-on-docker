@@ -10,6 +10,8 @@ laravelをdockerで
 APPLICATION=../src/
 ```
 - $cp -p src/.env.example src/.env
+
+### 下のコンテナ立ち上げをlaradock/で行ってから
 - $docker-compose exec workspace bash
 ### in workspace
 - $composer install
