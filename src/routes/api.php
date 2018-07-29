@@ -17,4 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('/stores', 'StoresController', ['except' => ['create', 'edit']]);
+Route::get('/stores', 'StoresController@index');

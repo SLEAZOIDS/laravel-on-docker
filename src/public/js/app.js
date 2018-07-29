@@ -1077,8 +1077,9 @@ module.exports = __webpack_require__(45);
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -43175,11 +43176,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('shop mounted.');
-    }
+  data: function data() {
+    return {
+      results: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("/api/stores").then(function (response) {
+      console.log(response.data);
+      _this.results = response.data;
+    });
+  }
 });
 
 /***/ }),
@@ -43190,18 +43209,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("div", { staticClass: "row" }, [_vm._v("\n    これはショップ\n    ")]),
+      _vm._v(" "),
+      _vm._l(_vm.results, function(result) {
+        return _c("div", [
+          _c("div", [
+            _vm._v(
+              "\n      ********\n      " +
+                _vm._s(result.name) +
+                "\n      ========\n      "
+            )
+          ])
+        ])
+      })
+    ],
+    2
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [_vm._v("\n    これはショップ\n    ")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
