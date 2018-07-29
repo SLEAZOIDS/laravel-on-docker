@@ -32,3 +32,6 @@ src/.envで以下の設定をmailtrapで取得したアカウントと合わせ�
 # nodejs
 laradock/.env
 - WORKSPACE_INSTALL_NODE=true
+
+# Vue.js
+- `npm run watch`でコンパイル＋監視

@@ -29,4 +29,7 @@
         </div>
     </div>
 </div>
+
+<shop></shop>
+
 @endsection

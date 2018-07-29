@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-                        I'm an example component!
+        これはショップ
         </div>
     </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('shop mounted.')
         }
     }
 </script>
