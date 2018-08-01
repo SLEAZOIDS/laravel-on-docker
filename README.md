@@ -11,14 +11,18 @@ APPLICATION=../src/
 ```
 - $cp -p src/.env.example src/.env
 
-### 下のコンテナ立ち上げをlaradock/で行ってから
+# コンテナ立ち上げ
+- $docker-compose up -d nginx mysql phpmyadmin
+
+
+# in workspaceでの設定
 - $docker-compose exec workspace bash
 ### in workspace
 - $composer install
 - $php artisan key:generate
+- $php artisan migrate
+- $php artisan db:seed
 
-# コンテナ立ち上げ
-- $docker-compose up -d nginx mysql phpmyadmin
 
 # メールの送受信テスト
 mailtrapを使う https://mailtrap.io  
