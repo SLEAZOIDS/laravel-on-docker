@@ -4,11 +4,8 @@ laravelをdockerで
 
 # 環境構築手順
 - $git submodule update -i
-- $cp -p laradock/env-example laradock/.env
-- laradock/.envを編集
-```
-APPLICATION=../src/
-```
+- setting/init.shを実行してlaradockの設定を変更する
+
 - $cp -p src/.env.example src/.env
 
 # コンテナ立ち上げ
