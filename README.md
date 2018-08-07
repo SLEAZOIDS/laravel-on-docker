@@ -36,3 +36,7 @@ laradock/.env
 
 # Vue.js
 - `npm run watch`でコンパイル＋監視
+
+# mysqlのinitializeがおかしいときは
+- 作業しまくって以下のデータが壊れているかもなので消しておく
+rm -Rf ~/.laradock/data
