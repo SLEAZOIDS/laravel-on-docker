@@ -35,7 +35,11 @@ laradock/.env
 - WORKSPACE_INSTALL_NODE=true
 
 # Vue.js
-- `npm run watch`でコンパイル＋監視
+コンパイルはローカルで行う
+- $cd src
+- $npm install
+- $npm run watch（これでコンパイル＋監視）
+
 
 # mysqlのinitializeがおかしいときは
 - 作業しまくって以下のデータが壊れているかもなので消しておく
