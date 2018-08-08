@@ -14,15 +14,7 @@
                         You are logged in!
                     @endif
 
-                    <ul>
-                      @forelse ($stores as $store)
-                        <li>
-                          <a href="{{ action('StoresController@show', $store) }}">{{ $store->name }}</a>
-                        </li>
-                      @empty
-                        <li>No post yes</li>
-                      @endforelse
-                    </ul>
+                    <shop></shop>
 
                 </div>
             </div>
@@ -30,6 +22,5 @@
     </div>
 </div>
 
-<shop></shop>
 
 @endsection

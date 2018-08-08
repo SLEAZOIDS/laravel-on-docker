@@ -6,9 +6,7 @@
 
         <div v-for="result in results">
           <div>
-          ********
-          {{result.name}}
-          ========
+            <a v-bind:href="'/stores/' + result.id">{{result.name}}</a>
           </div>
         </div>
     </div>
